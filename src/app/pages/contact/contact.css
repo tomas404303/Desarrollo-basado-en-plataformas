@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #ffff 0%, black 100%);
+}
+
+.contacto {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}

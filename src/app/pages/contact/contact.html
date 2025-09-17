@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="contacto">
+    <h2>Contáctanos</h2>
+
+    <form (submit)="guardarMensaje($event)">
+      <div>
+        <label>Nombre:</label>
+        <input type="text" id="nombre" (input)="nuevoMensaje.nombre = $any($event.target).value">
+      </div>
+
+      <div>
+        <label>Correo:</label>
+        <input type="email" id="correo" (input)="nuevoMensaje.correo = $any($event.target).value">
+      </div>
+
+      <div>
+        <label>Teléfono:</label>
+        <input type="text" id="telefono" (input)="nuevoMensaje.telefono = $any($event.target).value">
+      </div>
+
+      <div>
+        <label>Mensaje:</label>
+        <textarea id="mensaje" rows="4" (input)="nuevoMensaje.mensaje = $any($event.target).value"></textarea>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <hr>
+
+    <h3>Mensajes enviados:</h3>
+    <section>
+      @for (mensaje of mensajes; track $index) {
+        <article>
+          <p><b>Nombre:</b> {{ mensaje.nombre }}</p>
+          <p><b>Correo:</b> {{ mensaje.correo }}</p>
+          <p><b>Teléfono:</b> {{ mensaje.telefono }}</p>
+          <p><b>Mensaje:</b> {{ mensaje.mensaje }}</p>
+          <hr>
+        </article>
+      }
+    </section>
+  </div>
+</div>

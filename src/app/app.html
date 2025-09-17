@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<main>
+  <router-outlet></router-outlet>
+  <table table border="1">
+    @for (articulo of articulos; track articulo.id) {
+      <tr>
+        <td>{{ articulo.id }}</td>
+        <td>{{ articulo.name }}</td>
+        <td>{{ articulo.price }}</td>
+      </tr>
+    } 
+  </table>
+</main>
+
+<app-footer></app-footer>

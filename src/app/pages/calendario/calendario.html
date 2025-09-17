@@ -1,0 +1,16 @@
+<h2>Calendario</h2>
+<form (submit)="agregarFecha($event)">
+  <input 
+    type="date" 
+    [value]="nuevaFecha" 
+    (input)="actualizarFecha($event)" 
+    required 
+  />
+  <button type="submit">Agregar</button>
+</form>
+
+<ul>
+  @for (fecha of fechas; track $index) {
+    <li>{{ fecha }}</li>
+  }
+</ul>

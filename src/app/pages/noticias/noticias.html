@@ -1,0 +1,8 @@
+<h2>Noticias</h2>
+<ul>
+  @for (noticia of noticias; track $index) {
+    <li>
+      <strong>{{ noticia.titulo }}</strong> - <em>{{ noticia.fecha }}</em>
+    </li>
+  }
+</ul>

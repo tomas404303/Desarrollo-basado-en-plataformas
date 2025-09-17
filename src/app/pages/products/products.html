@@ -1,0 +1,12 @@
+<h1>BEBEN Y BEBEN LOS BORRACHOS EN EL RIO</h1>
+<section class="producto">
+    @for (producto of products; track producto.id) {
+        <article class="producto">
+            <img [src]="producto.image" height="100px" width="100px" alt="Imagen de {{ producto.name }}" />
+            <h2>{{ producto.name }}</h2>
+            <p>{{ producto.description}}</p>
+            <strong>{{producto.price}}</strong>
+            <p class="price">Precio: ${{ producto.price }}</p> 
+        </article>
+    }
+</section>
