@@ -5,8 +5,9 @@
             <img [src]="producto.image" height="100px" width="100px" alt="Imagen de {{ producto.name }}" />
             <h2>{{ producto.name }}</h2>
             <p>{{ producto.description}}</p>
-            <strong>{{producto.price}}</strong>
-            <p class="price">Precio: ${{ producto.price }}</p> 
+            <strong>{{ producto.price | currency:'$ ':'symbol':'1.0-0' }}</strong>
+            <p class="price">Precio: {{ producto.price | currency:'$ ':'symbol':'1.0-0' }}</p>
+
         </article>
     }
 </section>

@@ -1,32 +1,58 @@
-.products {
+h1 {
   text-align: center;
-  padding: 40px;
-}
-
-.products h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #333;
 }
 
-.products p {
+section.producto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+article.producto {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+article.producto img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+article.producto h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+article.producto p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+article.producto strong,
+article.producto .price {
+  display: block;
   font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.products button {
-  padding: 10px 20px;
-  background: blue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.products button:hover {
-  background: darkblue;
-}
-
-img:hover {
-  transform: scale(5.05);
-  transition: transform 10000ms;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  color: #b12704;
 }
