@@ -1,16 +1,18 @@
-<h2>Calendario</h2>
-<form (submit)="agregarFecha($event)">
-  <input 
-    type="date" 
-    [value]="nuevaFecha" 
-    (input)="actualizarFecha($event)" 
-    required 
-  />
-  <button type="submit">Agregar</button>
-</form>
+<div class="calendar-container">
+  <h2>Calendario</h2>
+  <form (submit)="agregarFecha($event)" class="calendar-form">
+    <input 
+      type="date" 
+      [value]="nuevaFecha" 
+      (input)="actualizarFecha($event)" 
+      required 
+    />
+    <button type="submit">Reservar</button>
+  </form>
 
-<ul>
-  @for (fecha of fechas; track $index) {
-    <li>{{ fecha }}</li>
-  }
-</ul>
+  <ul class="date-list">
+    @for (fecha of fechas; track $index) {
+      <li class="date-item">{{ fecha }}</li>
+    }
+  </ul>
+</div>
