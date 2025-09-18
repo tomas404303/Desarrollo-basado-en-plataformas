@@ -1,8 +1,11 @@
-<h2>Noticias</h2>
-<ul>
-  @for (noticia of noticias; track $index) {
-    <li>
-      <strong>{{ noticia.titulo }}</strong> - <em>{{ noticia.fecha }}</em>
-    </li>
-  }
-</ul>
+<div class="news-container">
+  <h2 class="section-title">Noticias</h2>
+  <section class="news-grid">
+    @for (noticia of noticias; track $index) {
+      <article class="news-card">
+        <h3 class="news-title">{{ noticia.titulo }}</h3>
+        <p class="news-date">{{ noticia.fecha }}</p>
+      </article>
+    }
+  </section>
+</div>
