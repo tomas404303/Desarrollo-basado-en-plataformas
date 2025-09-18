@@ -1,16 +1,43 @@
-nav ul {
+.main-header {
+  background-color: #F5F5F5;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.navbar {
+  display: flex;
+  justify-content: right;
+}
+
+.nav-list {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-nav a {
+.nav-list a {
   text-decoration: none;
-  color: black;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #36454F;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
 }
 
-nav a.active {
-  color: blue;
-  border-bottom: 2px solid blue;
+.nav-list a:hover {
+  color: #556B2F;
+  border-bottom: 2px solid #556B2F;
+}
+
+.nav-list a.active {
+  color: #CC5500; 
+  border-bottom: 2px solid #CC5500;
+}
+
+.nav-list a.active:hover {
+  color: #D4AF37;
+  border-bottom: 2px solid #D4AF37;
 }
