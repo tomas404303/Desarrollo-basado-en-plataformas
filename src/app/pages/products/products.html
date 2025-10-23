@@ -1,13 +1,20 @@
-<h1>BEBEN Y BEBEN LOS BORRACHOS EN EL RIO</h1>
-<section class="producto">
-    @for (producto of products; track producto.id) {
-        <article class="producto">
-            <img [src]="producto.image" height="100px" width="100px" alt="Imagen de {{ producto.name }}" />
-            <h2>{{ producto.name }}</h2>
-            <p>{{ producto.description}}</p>
-            <strong>{{ producto.price | currency:'$ ':'symbol':'1.0-0' }}</strong>
-            <p class="price">Precio: {{ producto.price | currency:'$ ':'symbol':'1.0-0' }}</p>
+<h1>Productos al mejor precio </h1>
 
-        </article>
-    }
+<section class="productos">
+  @for (producto of products; track producto.id) {
+    <article class="producto">
+      <img [src]="producto.image" height="120px" width="120px" alt="Imagen de {{ producto.name }}" />
+      <h2>{{ producto.name | uppercase }}</h2>
+      <p>{{ producto.description | lowercase }}</p>
+
+      <p class="price">
+        <strong>{{ producto.price | currency:'$ ':'symbol':'1.0-0' }}</strong>
+      </p>
+
+      <button mat-raised-button color="primary" (click)="addToCart(producto)">
+        <mat-icon>add_shopping_cart</mat-icon>
+        Agregar al carrito
+      </button>
+    </article>
+  }
 </section>

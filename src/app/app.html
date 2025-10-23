@@ -1,16 +1,15 @@
 <app-header></app-header>
 
-<main>
+<main class="main-container">
   <router-outlet></router-outlet>
-  <table table border="1">
-    @for (articulo of articulos; track articulo.id) {
-      <tr>
-        <td>{{ articulo.id }}</td>
-        <td>{{ articulo.name }}</td>
-        <td>{{ articulo.price }}</td>
-      </tr>
-    } 
-  </table>
+
+  <section class="reseñas-section">
+    <app-resenas></app-resenas>
+  </section>
 </main>
 
 <app-footer></app-footer>
+
+<button mat-fab color="accent" class="floating-btn" (click)="openCart()">
+  <mat-icon>shopping_cart</mat-icon>
+</button>

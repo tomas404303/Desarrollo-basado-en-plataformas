@@ -1,0 +1,36 @@
+<h2> Resenas de nuestros clientes</h2>
+
+<div class="resenas-container">
+  <mat-card *ngFor="let r of resenas" class="resena-card">
+    <mat-card-content>
+      <h3>{{ r.nombre }}</h3>
+      <p>{{ r.comentario }}</p>
+      <p> {{ r.estrellas }} / 5</p>
+      <small>{{ r.fecha | date:'short' }}</small>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<hr>
+
+<h3> Agregar una resena</h3>
+<form [formGroup]="resenaForm" (ngSubmit)="agregarResena()">
+  <mat-form-field appearance="outline" class="campo">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="campo">
+    <mat-label>Comentario</mat-label>
+    <textarea matInput formControlName="comentario"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="campo">
+    <mat-label>Estrellas (1-5)</mat-label>
+    <input type="number" matInput formControlName="estrellas" min="1" max="5">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="resenaForm.invalid">
+    Enviar resena
+  </button>
+</form>

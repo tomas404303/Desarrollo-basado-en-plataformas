@@ -15,4 +15,8 @@
       <li class="date-item">{{ fecha }}</li>
     }
   </ul>
+
+  <p class="nota">
+    solo se puede generar reservas los dias {{ dias | slice:3:7 }}
+  </p>
 </div>

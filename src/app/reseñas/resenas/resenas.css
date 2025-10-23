@@ -1,0 +1,22 @@
+.resenas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.resena-card {
+  width: 250px;
+}
+
+.campo {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}

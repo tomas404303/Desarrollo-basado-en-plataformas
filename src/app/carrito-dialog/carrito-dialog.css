@@ -1,0 +1,17 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.info p {
+  margin: 0;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px;
+}

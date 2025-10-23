@@ -28,7 +28,7 @@
 
     <hr>
 
-    <h3>Mensajes enviados:</h3>
+    <h3>Mensajes enviados (detalle):</h3>
     <section class="messages">
       @for (mensaje of mensajes; track $index) {
         <article class="message-card">
@@ -39,5 +39,10 @@
         </article>
       }
     </section>
+
+    <hr>
+
+    <h3>Mensajes enviados (JSON):</h3>
+    <pre>{{ mensajes | json }}</pre>
   </div>
 </div>
