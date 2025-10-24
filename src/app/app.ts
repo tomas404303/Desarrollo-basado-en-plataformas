@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { CartDialogComponent } from './carrito-dialog/carrito-dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { CartService } from './service/carrito';
 import { ResenasModule } from './reseñas/resenas-module';
 
@@ -18,8 +19,8 @@ import { ResenasModule } from './reseñas/resenas-module';
     FooterComponent,
     MatButtonModule,
     MatIconModule,
-    ResenasModule
-
+    MatToolbarModule,
+    ResenasModule,
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']

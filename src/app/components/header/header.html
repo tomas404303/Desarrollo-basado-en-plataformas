@@ -1,12 +1,14 @@
-<header class="main-header">
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
-      <li><a routerLink="/productos" routerLinkActive="active">Productos</a></li>
-      <li><a routerLink="/nosotros" routerLinkActive="active">Nosotros</a></li>
-      <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
-      <li><a routerLink="/calendario" routerLinkActive="active">Calendario</a></li>
-      <li><a routerLink="/noticias" routerLinkActive="active">Noticias</a></li>
-    </ul>
-  </nav>
-</header>
+<mat-toolbar color="primary" class="main-toolbar">
+  <span class="logo">MiSitio</span>
+
+  <span class="spacer"></span>
+
+  <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    Inicio
+  </button>
+  <button mat-button routerLink="/productos" routerLinkActive="active">Productos</button>
+  <button mat-button routerLink="/nosotros" routerLinkActive="active">Nosotros</button>
+  <button mat-button routerLink="/contacto" routerLinkActive="active">Contacto</button>
+  <button mat-button routerLink="/calendario" routerLinkActive="active">Calendario</button>
+  <button mat-button routerLink="/noticias" routerLinkActive="active">Noticias</button>
+</mat-toolbar>

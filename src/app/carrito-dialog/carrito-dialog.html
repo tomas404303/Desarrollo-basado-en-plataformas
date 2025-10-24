@@ -1,28 +1,30 @@
-<h2>🛒 Tu carrito</h2>
+<div class="cart-container">
+  <h2>🛒 Tu carrito</h2>
 
-<div *ngIf="elapsedSeconds > 0">
-  <p><strong>Último producto agregado hace:</strong> {{ elapsedSeconds }} segundos</p>
-</div>
+  <div *ngIf="elapsedSeconds > 0">
+    <p><strong>Último producto agregado hace:</strong> {{ elapsedSeconds }} segundos</p>
+  </div>
 
-<div *ngIf="items.length; else emptyCart">
-  <div *ngFor="let item of items" class="cart-item">
-    <img [src]="item.image" alt="{{ item.name }}" width="50" height="50" />
-    <div class="info">
-      <strong>{{ item.name }}</strong>
-      <p>{{ item.price | currency:'$':'symbol':'1.0-0' }}</p>
+  <div *ngIf="items.length; else emptyCart">
+    <div *ngFor="let item of items" class="cart-item">
+      <img [src]="item.image" alt="{{ item.name }}" width="50" height="50" />
+      <div class="info">
+        <strong>{{ item.name }}</strong>
+        <p>{{ item.price | currency:'$':'symbol':'1.0-0' }}</p>
+      </div>
+      <button mat-icon-button color="warn" (click)="removeItem(item.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </div>
-    <button mat-icon-button color="warn" (click)="removeItem(item.id)">
-      <mat-icon>delete</mat-icon>
-    </button>
+
+    <div class="actions">
+      <button mat-stroked-button color="warn" (click)="clearCart()">Vaciar carrito</button>
+      <button mat-flat-button color="primary" (click)="checkout()">Finalizar compra</button>
+    </div>
   </div>
 
-  <div class="actions">
-    <button mat-stroked-button color="warn" (click)="clearCart()">Vaciar carrito</button>
-    <button mat-flat-button color="primary" (click)="checkout()">Finalizar compra</button>
-  </div>
+  <ng-template #emptyCart>
+    <p>Tu carrito está vacío</p>
+    <button mat-flat-button disabled>Finalizar compra</button>
+  </ng-template>
 </div>
-
-<ng-template #emptyCart>
-  <p>Tu carrito está vacío</p>
-  <button mat-flat-button disabled>Finalizar compra</button>
-</ng-template>

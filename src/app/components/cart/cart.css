@@ -1,6 +1,12 @@
 .cart-fab {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 20px;     
+  right: 20px;        
   z-index: 1000;
+  transform: scale(0.9); 
+}
+
+.cart-fab mat-icon {
+  font-size: 22px;   
+  line-height: 1;
 }
